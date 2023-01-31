@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="topContainer">
+        <div class="topCLeft">
+            <ul>
+                <li>ROCK</li>
+                <li>PAPER</li>
+                <li>SCISSORS</li>
+            </ul>
+        </div>
+        <div class="topCRight">
+            <div class="scoreYText">YOUR <br> SCORE</div>
+            <div class="scoreTag" id="abhi">0</div>
+        </div>
+    </div>
+
+    <!------------------------------ Page 1st Starts, Here --------------------------->
+    <div class="downContainer" style="display: block;">
+        <div class="down1stDiv">
+            <div class="pCircleDiv">
+                <img src="img/Line 1.png" id="rowLine">
+
+                <img src="img/PurpleCircle.png" id="pCircle">
+                <img src="img/Scissor.png" id="scissor" class="even">
+
+
+                <img src="img/YellowCircle.png" id="yCircle">
+                <img src="img/Rock.png" id="rock" class="even">
+
+            </div>
+
+        </div>
+
+        <div class="down2ndDiv">
+            <!-- <img src="img/Line 3.png" id="colL1"> -->
+            <!-- <img src="img/Line 2.png" id="colL2"> -->
+
+
+            <img src="img/PinkCircle.png" id="pCircle">
+            <img src="img/Paper.png" id="paper" class="even">
+        </div>
+    </div>
+
+    <!------------------------------ Page 2nd Starts, Here --------------------------->
+
+    <div class="picked" style="display: none;">
+        <div class="youPicked">
+            <span>YOU PICKED</span>
+            <img src="img/bigCircle.svg" id="bigCP2">
+            <img src="img/PurpleCircle.png" id="pCircleP2">
+            <img src="img/Scissor.png" id="scissorP2" value="1">
+        </div>
+        <div class="winText">
+            <div>
+                <p class="uWin">YOU WIN</p>
+                <p class="pWin">PC WIN</p>
+
+                <p class="againstPc">AGAINST PC</p>
+            </div>
+
+            <button type="button" onclick="newfunction()">PLAY AGAIN</button>
+
+        </div>
+        <div class="pcPicked">
+            <span>PC PICKED</span>
+            <img src="img/bigCircle.svg" id="bigCP3">
+            <img src="img/PurpleCircle.png" id="pCircleP2">
+            <img src="img/Scissor.png" id="scissorP2" value="1">
+        </div>
+    </div>
+
+
+    <!-------------------------------- Try Again Span -------------------------------->
+
+    <div class="dDiv">
+        <span class="tryAgain" style="display: none;">TRY AGAIN</span>
+        <button id="rules" onclick="myfun()">RULES</button> <!--  Rules button -->
+    </div>
+
+    <!-------------------------------- PopUp Container -------------------------------->
+
+    <span class="popUpContainer " id="myPopup">
+        <div class="rulesContainer">
+            <div class="rulesCInside">
+                <label for="text">Game Rules</label>
+                <ul>
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                    <li>Agree ahead of time whether you&#39ll count off “rock, paper, scissors, shoot” or just “rock,
+                        paper,
+                        scissors.”</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                </ul>
+            </div>
+            <span id="redCircle">X</span>
+
+        </div>
+    </span>
+
+
+    <!-------------------------------- JavaScript link -------------------------------->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

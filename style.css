@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 730px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    background: linear-gradient(180deg, #0E1A44 0%, rgba(52, 96, 250, 0.68) 100%);
+}
+
+.topContainer {
+    width: 780px;
+    height: 148px;
+    padding: 15px 20px;
+    margin: 62px auto;
+    border-radius: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid #FFFFFF;
+}
+
+.topCLeft li {
+    list-style: none;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.topCRight {
+    text-align: center;
+    width: 145px;
+    height: 141px;
+    background: #FFFFFF;
+    border-radius: 9px;
+}
+
+.scoreYText,
+.scoreTag {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.scoreYText {
+
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #656565;
+}
+
+.scoreTag {
+    font-size: 68px;
+    line-height: 80px;
+    color: #252525;
+}
+
+/*------------------------------ Page 1st Starts, Here --------------------------- */
+
+.down1stDiv,
+.down2ndDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#pCircle,
+#yCircle,
+#pCircle {
+    position: absolute;
+}
+
+#scissor,
+#rock,
+#paper {
+    position: relative;
+}
+
+#scissor:hover,
+#rock:hover,
+#paper:hover,
+.tryAgain:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+#scissor {
+    margin: 50px 65px;
+}
+
+#rock {
+    margin: 45px 45px 45px 90px;
+}
+
+#paper {
+    margin: 45px;
+}
+
+#rowLine {
+    width: 200px;
+    height: 17px;
+    margin: 70px;
+    position: absolute;
+}
+
+#colL1 {
+    position: absolute;
+}
+
+#colL2 {
+    position: absolute;
+}
+
+#yCircle {
+    margin-left: 50px;
+}
+
+/* ------------------------------ Page 2nd Starts, Here --------------------------- */
+
+.picked {
+    display: flex;
+    margin-left: 200px;
+}
+
+#bigCP2,
+#bigCP3,
+#scissorP2,
+span {
+    position: absolute;
+}
+
+
+#scissorP2 {
+    margin: 200px 215px;
+}
+
+.picked span {
+    margin: 100px 180px;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+#pCircleP2 {
+    margin: 155px;
+    position: absolute;
+}
+
+.winText {
+    justify-content: center;
+    margin-top: 170px;
+    margin-left: 450px;
+}
+
+.uWin,
+.againstPc,
+.pWin {
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.uWin,
+.pWin {
+    font-size: 39px;
+    line-height: 46px;
+}
+
+.againstPc {
+    font-size: 25px;
+    line-height: 29px;
+}
+
+.winText button {
+    width: 174px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 9px;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: #6B6B6B;
+    border: none;
+}
+
+/* -------------------------------- Try Again Span -------------------------------- */
+
+/*---  TryAgain button -- */
+
+.dDiv {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.tryAgain {
+    margin-right: 720px;
+    margin-top: 25px;
+}
+
+.tryAgain {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: #FAF2F2;
+    margin-top: 20px;
+}
+
+/* ---------------  Rules button ------------- */
+#rules:hover,
+#redCircle:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#rules {
+    margin: 25px 20px 20px 580px;
+    background: transparent;
+    width: 119px;
+    height: 40px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+/* ------------------------------- PopUp Container & Rules -------------------------------- */
+.popUpContainer {
+    width: 303px;
+    height: 367px;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    display: none;
+    opacity: 0;
+    z-index: 999;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.show {
+    display: block;
+    opacity: 1;
+    bottom: 135px;
+    right: 70px;
+}
+
+#rules {
+    position: relative;
+    cursor: pointer;
+}
+
+/* ------------------------------------- */
+
+#redCircle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 335px;
+    left: 290px;
+    font-weight: 400;
+    font-size: 44px;
+    color: #FFFFFF;
+    background: #FF0000;
+    border: 5px solid #465BA7;
+    border-radius: 100%;
+}
+
+.rulesCInside {
+    position: absolute;
+    width: 230px;
+    height: 300px;
+    display: grid;
+    text-align: center;
+    width: 278px;
+    height: 325px;
+    background: #08143E;
+    border: 7px solid #465BA7;
+    border-radius: 13px;
+    padding: 18px;
+}
+
+.rulesCInside label {
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+
+.rulesCInside ul {
+    margin-left: 21px;
+}
+
+.rulesCInside li {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+    list-style-type: square;
+    text-align: left;
+    list-style-position: outside ;
+    margin-bottom: 18px;
+
+}
+
+.rulesCInside li::marker {
+    /* padding-left: 0 25px; */
+    font-size: 20px;
+    color: #FFD600;
+}
+
+/* ------------------------ */
