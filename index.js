@@ -1,29 +1,25 @@
-
-var imgT = document.getElementsByClassName('even')
-
 var myScore = [];
 var compScore = [];
 
+var imgT = document.getElementsByClassName('even')
 
 function newfunction() {
   document.querySelector(".downContainer").style.display = "block";
   document.querySelector(".picked").style.display = "none";
 }
 
-// var rulesvar = document.getElementById('#rules')
-// rulesvar.addEventListener('click', () => {
-//   document.querySelector(".popUpContainer").style.display = "block";
-// })
-
-function myfun() {
-  // document.querySelector(".popUpContainer").style.display = "block"
+function rulesfunction() {
   var popup = document.querySelector(".popUpContainer")
-  popup.classList.toggle("show");
+  popup.classList.add("showRulesContainer");
+}
+
+function popUpClose(){
+  var element = document.querySelector('.popUpContainer')
+  element.classList.remove("showRulesContainer");
 }
 
 for (i = 0; i < imgT.length; i++) {
   var button = imgT[i];
-  // console.log(button)
 
   button.addEventListener('click', function (event) {
 
@@ -36,7 +32,7 @@ for (i = 0; i < imgT.length; i++) {
     // console.log(scoreVal1)
 
     var inputValue = scoreVal1.id         // My Selection 
-    // console.log(inputValue)
+    console.log('Me choose ' + inputValue, ', Comp choose ' + compPick)
 
     var message = 'Tie, Play again';
     var tryAgainDisplyNone = document.querySelector(".tryAgain").style.display = "none";
@@ -46,119 +42,127 @@ for (i = 0; i < imgT.length; i++) {
       document.querySelector(".downContainer").style.display = "none";
     }
 
-    // Try Again Btn
+    // Try Again btn
     function tryPage() {
       document.querySelector(".tryAgain").style.display = "block";
     }
 
-    // youWin page
-    function youWinPage() {
+    // winnerPage 
+
+    function winnerPage(winnerType) {
+
       if (inputValue == "rock") {
         document.getElementById("scissorP2").src = "img/Rock.png";
         document.getElementById("pCircleP2").src = "img/YellowCircle.png";
       }
+
       else if (inputValue == "paper") {
         document.getElementById("scissorP2").src = "img/Paper.png";
         document.getElementById("pCircleP2").src = "img/PinkCircle.png";
       }
+
       else if (inputValue == "scissor") {
         document.getElementById("scissorP2").src = "img/Scissor.png";
         document.getElementById("pCircleP2").src = "img/PurpleCircle.png";
       }
-      document.querySelector(".picked").style.display = "flex";
-      document.querySelector(".pWin").style.display = "none";
-      document.querySelector("#bigCP3").style.display = "none";
 
-    }
-
-    function pcWinPage() {
       if (compPick == "rock") {
-        document.getElementById("scissorP2").src = "img/Rock.png";
-        document.getElementById("pCircleP2").src = "img/YellowCircle.png";
+        document.getElementById("scissorP3").src = "img/Rock.png";
+        document.getElementById("pCircleP3").src = "img/YellowCircle.png";
       }
+
       else if (compPick == "paper") {
-        document.getElementById("scissorP2").src = "img/Paper.png";
-        document.getElementById("pCircleP2").src = "img/PinkCircle.png";
+        document.getElementById("scissorP3").src = "img/Paper.png";
+        document.getElementById("pCircleP3").src = "img/PinkCircle.png";
       }
+
       else if (compPick == "scissor") {
-        document.getElementById("scissorP2").src = "img/Scissor.png";
-        document.getElementById("pCircleP2").src = "img/PurpleCircle.png";
+        document.getElementById("scissorP3").src = "img/Scissor.png";
+        document.getElementById("pCircleP3").src = "img/PurpleCircle.png";
       }
-      document.querySelector(".picked").style.display = "flex";
-      document.querySelector(".uWin").style.display = "none";
-      document.querySelector(".pWin").style.display = "block";
-      document.querySelector("#bigCP2").style.display = "none";
+
+      if (winnerType == 'playerWin') {
+        document.querySelector(".picked").style.display = "flex";
+        document.querySelector(".uWin").style.display = "block";
+        document.querySelector(".pWin").style.display = "none";
+        document.querySelector("#bigCP3").style.visibility='hidden';
+      }
+
+      else {
+        document.querySelector(".picked").style.display = "flex";
+        document.querySelector(".uWin").style.display = "none";
+        document.querySelector(".pWin").style.display = "block";
+        document.querySelector("#bigCP2").style.visibility='hidden';
+      }
+      
     }
 
     // Rock
 
     if (compPick == 'rock' && inputValue == 'rock') {
-      tryPage()                  // Tie
-      console.log('tie')
+      tryPage()                      // Tie
     }
+
     else if (compPick == 'rock' && inputValue == 'scissor') {
-      compScore.push('win')       //compWin
+      compScore.push('win')         //compWin
       winPage()
       tryAgainDisplyNone
-      pcWinPage()
-      
+      winnerPage('pcWin')
     }
+
     else if (compPick == 'rock' && inputValue == 'paper') {
-      myScore.push('win')           // meWin
+      myScore.push('win')           // meWin 
       winPage()
       tryAgainDisplyNone
-      youWinPage()
+      winnerPage('playerWin')
     }
 
     // Paper
 
     else if (compPick == "paper" && inputValue == "paper") {
       tryPage()                      // Tie
-      console.log('tie')
-
+      // console.log('tie')
     }
+
     else if (compPick == "paper" && inputValue == "scissor") {
-      myScore.push('win')        // meWin
+      myScore.push('win')          // meWin
       winPage()
       tryAgainDisplyNone
-      youWinPage()
+      winnerPage('playerWin')
     }
 
     else if (compPick == "paper" && inputValue == "rock") {
       compScore.push('win')          //compWin
-
       winPage()
       tryAgainDisplyNone
-      pcWinPage()
+      winnerPage('pcWin')
     }
 
     // Scissor
 
     else if (compPick == "scissor" && inputValue == "scissor") {
-      tryPage()                  // Tie
-      console.log('tie')
-
+      tryPage()                       // Tie
     }
+
     else if (compPick == "scissor" && inputValue == "paper") {
       compScore.push('win')              //compWin
-
       winPage()
       tryAgainDisplyNone
-      pcWinPage()
+      winnerPage('pcWin')
     }
+
     else if (compPick == "scissor" && inputValue == "rock") {
       myScore.push('win')              // meWin
       winPage()
       tryAgainDisplyNone
-      youWinPage()
+      winnerPage('playerWin')
     }
+
     else {
       alert('Error')
     }
 
     var length1 = myScore.length
-    // console.log(length1)
-
     document.querySelector(".scoreTag").innerHTML = length1;
 
     // var addVariable = myScore.length
@@ -172,10 +176,6 @@ for (i = 0; i < imgT.length; i++) {
 // console.log(myScore.length)
 
 
-
-
-
-// Rules Popup Effect:
 
 
 

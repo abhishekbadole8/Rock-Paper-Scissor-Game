@@ -64,10 +64,11 @@
             <img src="img/PurpleCircle.png" id="pCircleP2">
             <img src="img/Scissor.png" id="scissorP2" value="1">
         </div>
+
         <div class="winText">
             <div>
                 <p class="uWin">YOU WIN</p>
-                <p class="pWin">PC WIN</p>
+                <p class="pWin">You LOST</p>
 
                 <p class="againstPc">AGAINST PC</p>
             </div>
@@ -78,8 +79,8 @@
         <div class="pcPicked">
             <span>PC PICKED</span>
             <img src="img/bigCircle.svg" id="bigCP3">
-            <img src="img/PurpleCircle.png" id="pCircleP2">
-            <img src="img/Scissor.png" id="scissorP2" value="1">
+            <img src="img/PurpleCircle.png" id="pCircleP3">
+            <img src="img/Scissor.png" id="scissorP3" value="1">
         </div>
     </div>
 
@@ -87,13 +88,13 @@
     <!-------------------------------- Try Again Span -------------------------------->
 
     <div class="dDiv">
-        <span class="tryAgain" style="display: none;">TRY AGAIN</span>
-        <button id="rules" onclick="myfun()">RULES</button> <!--  Rules button -->
+        <span class="tryAgain" style="display: none;">TIE, TRY AGAIN</span>
+        <button id="rules" onclick="rulesfunction()">RULES</button> <!--  Rules button -->
     </div>
 
     <!-------------------------------- PopUp Container -------------------------------->
 
-    <span class="popUpContainer " id="myPopup">
+    <span class="popUpContainer">
         <div class="rulesContainer">
             <div class="rulesCInside">
                 <label for="text">Game Rules</label>
@@ -106,7 +107,7 @@
                     <li>If both players lay down the same hand, each player lays down another hand</li>
                 </ul>
             </div>
-            <span id="redCircle">X</span>
+            <span id="redCircle" onclick="popUpClose()">X</span>
 
         </div>
     </span>

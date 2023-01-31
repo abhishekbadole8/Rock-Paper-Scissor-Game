@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 730px;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     background: linear-gradient(180deg, #0E1A44 0%, rgba(52, 96, 250, 0.68) 100%);
@@ -130,13 +130,12 @@ body {
 
 #bigCP2,
 #bigCP3,
-#scissorP2,
+#scissorP2,#scissorP3,
 span {
     position: absolute;
 }
 
-
-#scissorP2 {
+#scissorP2,#scissorP3 {
     margin: 200px 215px;
 }
 
@@ -148,7 +147,7 @@ span {
     color: #FFFFFF;
 }
 
-#pCircleP2 {
+#pCircleP2,#pCircleP3 {
     margin: 155px;
     position: absolute;
 }
@@ -203,7 +202,7 @@ span {
 }
 
 .tryAgain {
-    margin-right: 720px;
+    margin-right: 705px;
     margin-top: 25px;
 }
 
@@ -254,10 +253,10 @@ span {
     overflow: auto;
 }
 
-.show {
+.showRulesContainer {
     display: block;
     opacity: 1;
-    bottom: 135px;
+    bottom: 100px;
     right: 70px;
 }
 
@@ -269,17 +268,23 @@ span {
 /* ------------------------------------- */
 
 #redCircle {
+    display: flex;
+    justify-content: center;
     width: 50px;
     height: 50px;
     position: absolute;
     bottom: 335px;
     left: 290px;
     font-weight: 400;
-    font-size: 44px;
+    font-size: 40px;
     color: #FFFFFF;
     background: #FF0000;
     border: 5px solid #465BA7;
     border-radius: 100%;
+}
+
+#redCircle:hover {
+    color: rgb(14, 98, 14);
 }
 
 .rulesCInside {
@@ -314,7 +319,7 @@ span {
     color: #FFFFFF;
     list-style-type: square;
     text-align: left;
-    list-style-position: outside ;
+    list-style-position: outside;
     margin-bottom: 18px;
 
 }
