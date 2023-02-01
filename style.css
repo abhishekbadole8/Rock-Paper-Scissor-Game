@@ -110,11 +110,15 @@ body {
 }
 
 #colL1 {
-    position: absolute;
+  position: absolute;
+  bottom: 195px;
+  left: 665px;
 }
 
 #colL2 {
-    position: absolute;
+  position: absolute;
+  top: 447px;
+  right: 670px;
 }
 
 #yCircle {
