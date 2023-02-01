@@ -18,37 +18,6 @@ function popUpClose(){
   element.classList.remove("showRulesContainer");
 }
 
-for (i = 0; i < imgT.length; i++) {
-  var button = imgT[i];
-
-  button.addEventListener('click', function (event) {
-
-    var a = ['rock', 'paper', 'scissor']
-
-    var compPick = a[Math.floor(Math.random() * 3)];    // Computer Selection
-    // console.log(compPick)
-
-    var scoreVal1 = event.target;          // Tag selection
-    // console.log(scoreVal1)
-
-    var inputValue = scoreVal1.id         // My Selection 
-    console.log('Me choose ' + inputValue, ', Comp choose ' + compPick)
-
-    var message = 'Tie, Play again';
-    var tryAgainDisplyNone = document.querySelector(".tryAgain").style.display = "none";
-
-    // downContainer 
-    function winPage() {
-      document.querySelector(".downContainer").style.display = "none";
-    }
-
-    // Try Again btn
-    function tryPage() {
-      document.querySelector(".tryAgain").style.display = "block";
-    }
-
-    // winnerPage 
-
     function winnerPage(winnerType) {
 
       if (inputValue == "rock") {
@@ -96,6 +65,39 @@ for (i = 0; i < imgT.length; i++) {
       }
       
     }
+
+for (i = 0; i < imgT.length; i++) {
+  var button = imgT[i];
+
+  button.addEventListener('click', function (event) {
+
+    var a = ['rock', 'paper', 'scissor']
+
+    var compPick = a[Math.floor(Math.random() * 3)];    // Computer Selection
+    // console.log(compPick)
+
+    var scoreVal1 = event.target;          // Tag selection
+    // console.log(scoreVal1)
+
+    var inputValue = scoreVal1.id         // My Selection 
+    console.log('Me choose ' + inputValue, ', Comp choose ' + compPick)
+
+    var message = 'Tie, Play again';
+    var tryAgainDisplyNone = document.querySelector(".tryAgain").style.display = "none";
+
+    // downContainer 
+    function winPage() {
+      document.querySelector(".downContainer").style.display = "none";
+    }
+
+    // Try Again btn
+    function tryPage() {
+      document.querySelector(".tryAgain").style.display = "block";
+    }
+
+    // winnerPage 
+
+
 
     // Rock
 
