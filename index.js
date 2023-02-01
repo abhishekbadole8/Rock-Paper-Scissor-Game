@@ -18,39 +18,8 @@ function popUpClose(){
   element.classList.remove("showRulesContainer");
 }
 
-    function winnerPage(winnerType) {
-
-      if (inputValue == "rock") {
-        document.getElementById("scissorP2").src = "img/Rock.png";
-        document.getElementById("pCircleP2").src = "img/YellowCircle.png";
-      }
-
-      else if (inputValue == "paper") {
-        document.getElementById("scissorP2").src = "img/Paper.png";
-        document.getElementById("pCircleP2").src = "img/PinkCircle.png";
-      }
-
-      else if (inputValue == "scissor") {
-        document.getElementById("scissorP2").src = "img/Scissor.png";
-        document.getElementById("pCircleP2").src = "img/PurpleCircle.png";
-      }
-
-      if (compPick == "rock") {
-        document.getElementById("scissorP3").src = "img/Rock.png";
-        document.getElementById("pCircleP3").src = "img/YellowCircle.png";
-      }
-
-      else if (compPick == "paper") {
-        document.getElementById("scissorP3").src = "img/Paper.png";
-        document.getElementById("pCircleP3").src = "img/PinkCircle.png";
-      }
-
-      else if (compPick == "scissor") {
-        document.getElementById("scissorP3").src = "img/Scissor.png";
-        document.getElementById("pCircleP3").src = "img/PurpleCircle.png";
-      }
-
-      if (winnerType == 'playerWin') {
+function showCircle(){
+  if (winnerType == 'playerWin') {
         document.querySelector(".picked").style.display = "flex";
         document.querySelector(".uWin").style.display = "block";
         document.querySelector(".pWin").style.display = "none";
@@ -63,8 +32,9 @@ function popUpClose(){
         document.querySelector(".pWin").style.display = "block";
         document.querySelector("#bigCP2").style.visibility='hidden';
       }
-      
-    }
+}
+
+
 
 for (i = 0; i < imgT.length; i++) {
   var button = imgT[i];
@@ -96,7 +66,41 @@ for (i = 0; i < imgT.length; i++) {
     }
 
     // winnerPage 
+        function winnerPage(winnerType) {
 
+      if (inputValue == "rock") {
+        document.getElementById("scissorP2").src = "img/Rock.png";
+        document.getElementById("pCircleP2").src = "img/YellowCircle.png";
+      }
+
+      else if (inputValue == "paper") {
+        document.getElementById("scissorP2").src = "img/Paper.png";
+        document.getElementById("pCircleP2").src = "img/PinkCircle.png";
+      }
+
+      else if (inputValue == "scissor") {
+        document.getElementById("scissorP2").src = "img/Scissor.png";
+        document.getElementById("pCircleP2").src = "img/PurpleCircle.png";
+      }
+
+      if (compPick == "rock") {
+        document.getElementById("scissorP3").src = "img/Rock.png";
+        document.getElementById("pCircleP3").src = "img/YellowCircle.png";
+      }
+
+      else if (compPick == "paper") {
+        document.getElementById("scissorP3").src = "img/Paper.png";
+        document.getElementById("pCircleP3").src = "img/PinkCircle.png";
+      }
+
+      else if (compPick == "scissor") {
+        document.getElementById("scissorP3").src = "img/Scissor.png";
+        document.getElementById("pCircleP3").src = "img/PurpleCircle.png";
+      }
+
+      
+      
+    }
 
 
     // Rock
@@ -110,6 +114,7 @@ for (i = 0; i < imgT.length; i++) {
       winPage()
       tryAgainDisplyNone
       winnerPage('pcWin')
+      showCircle('pcWin')
     }
 
     else if (compPick == 'rock' && inputValue == 'paper') {
@@ -117,6 +122,7 @@ for (i = 0; i < imgT.length; i++) {
       winPage()
       tryAgainDisplyNone
       winnerPage('playerWin')
+      showCircle('playerWin')
     }
 
     // Paper
@@ -131,6 +137,7 @@ for (i = 0; i < imgT.length; i++) {
       winPage()
       tryAgainDisplyNone
       winnerPage('playerWin')
+      showCircle('playerWin')
     }
 
     else if (compPick == "paper" && inputValue == "rock") {
@@ -138,6 +145,7 @@ for (i = 0; i < imgT.length; i++) {
       winPage()
       tryAgainDisplyNone
       winnerPage('pcWin')
+      showCircle('pcWin')
     }
 
     // Scissor
@@ -151,6 +159,7 @@ for (i = 0; i < imgT.length; i++) {
       winPage()
       tryAgainDisplyNone
       winnerPage('pcWin')
+      showCircle('pcWin')
     }
 
     else if (compPick == "scissor" && inputValue == "rock") {
@@ -158,6 +167,7 @@ for (i = 0; i < imgT.length; i++) {
       winPage()
       tryAgainDisplyNone
       winnerPage('playerWin')
+      showCircle('playerWin')
     }
 
     else {
