@@ -18,7 +18,7 @@ function popUpClose(){
   element.classList.remove("showRulesContainer");
 }
 
-function showCircle(){
+function showCircle(winnerType){
   if (winnerType == 'playerWin') {
         document.querySelector(".picked").style.display = "flex";
         document.querySelector(".uWin").style.display = "block";
