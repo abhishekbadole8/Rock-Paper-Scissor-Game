@@ -23,16 +23,16 @@ function showCircle(winnerType){
         document.querySelector(".picked").style.display = "flex";
         document.querySelector(".uWin").style.display = "block";
         document.querySelector(".pWin").style.display = "none";
-        document.querySelector("#bigCP3").style.visibility='visible';
-    document.querySelector("#bigCP2").style.visibility='hidden';
+        document.querySelector("#bigCP3").style.visibility='hidden';
+    document.querySelector("#bigCP2").style.visibility='visible';
       }
 
       else {
         document.querySelector(".picked").style.display = "flex";
         document.querySelector(".uWin").style.display = "none";
         document.querySelector(".pWin").style.display = "block";
-        document.querySelector("#bigCP2").style.visibility='visible';
-        document.querySelector("#bigCP3").style.visibility='hidden';
+        document.querySelector("#bigCP2").style.visibility='hidden';
+        document.querySelector("#bigCP3").style.visibility='visible';
       }
 }
 
