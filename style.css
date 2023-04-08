@@ -1,18 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    height: 100%;
+    width: 100%;
+    height: 92vh;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     background: linear-gradient(180deg, #0E1A44 0%, rgba(52, 96, 250, 0.68) 100%);
 }
 
 .topContainer {
-    width: 780px;
-    height: 148px;
+    width: 55%;
+    height: 23vh;
     padding: 15px 20px;
     margin: 62px auto;
     border-radius: 13px;
@@ -25,7 +27,7 @@ body {
 .topCLeft li {
     list-style: none;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 2.3rem;
     line-height: 47px;
     letter-spacing: 0.1em;
     color: #FFFFFF;
@@ -33,28 +35,27 @@ body {
 
 .topCRight {
     text-align: center;
-    width: 145px;
-    height: 141px;
-    background: #FFFFFF;
+    width: 20%;
+    height: 100%;
+    background-color: #FFFFFF;
     border-radius: 9px;
 }
 
 .scoreYText,
 .scoreTag {
-    margin-top: 10px;
+    margin-top: 1.1vh;
     font-weight: 700;
 }
 
 .scoreYText {
-
-    font-size: 17px;
+    font-size: 1rem;
     line-height: 20px;
     letter-spacing: 0.1em;
     color: #656565;
 }
 
 .scoreTag {
-    font-size: 68px;
+    font-size: 4.2rem;
     line-height: 80px;
     color: #252525;
 }
@@ -110,15 +111,11 @@ body {
 }
 
 #colL1 {
-  position: absolute;
-  bottom: 195px;
-  left: 665px;
+    position: absolute;
 }
 
 #colL2 {
-  position: absolute;
-  top: 447px;
-  right: 670px;
+    position: absolute;
 }
 
 #yCircle {
@@ -134,12 +131,14 @@ body {
 
 #bigCP2,
 #bigCP3,
-#scissorP2,#scissorP3,
+#scissorP2,
+#scissorP3,
 span {
     position: absolute;
 }
 
-#scissorP2,#scissorP3 {
+#scissorP2,
+#scissorP3 {
     margin: 200px 215px;
 }
 
@@ -151,7 +150,8 @@ span {
     color: #FFFFFF;
 }
 
-#pCircleP2,#pCircleP3 {
+#pCircleP2,
+#pCircleP3 {
     margin: 155px;
     position: absolute;
 }
@@ -226,7 +226,7 @@ span {
 }
 
 #rules {
-    margin: 25px 20px 20px 580px;
+    margin: 25px 3vw 20px 580px;
     background: transparent;
     width: 119px;
     height: 40px;
@@ -243,13 +243,14 @@ span {
 
 /* ------------------------------- PopUp Container & Rules -------------------------------- */
 .popUpContainer {
-    width: 303px;
+    width: 300px;
     height: 367px;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
     display: none;
     opacity: 0;
     z-index: 999;
+    border-radius: 13px;
 }
 
 .popup .content {
@@ -260,7 +261,7 @@ span {
 .showRulesContainer {
     display: block;
     opacity: 1;
-    bottom: 100px;
+    bottom: 125px;
     right: 70px;
 }
 
@@ -272,17 +273,18 @@ span {
 /* ------------------------------------- */
 
 #redCircle {
+    width: 55px;
+    height: 55px;
     display: flex;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    align-items: center;
     position: absolute;
     bottom: 335px;
-    left: 290px;
-    font-weight: 400;
-    font-size: 40px;
+    left: 269px;
+    font-weight: 600;
+    font-size: 33px;
     color: #FFFFFF;
-    background: #FF0000;
+    background-color: #FF0000;
     border: 5px solid #465BA7;
     border-radius: 100%;
 }
@@ -292,13 +294,13 @@ span {
 }
 
 .rulesCInside {
+    width: 100%;
+    height: 100%;
+    /* width: 278px;
+    height: 325px; */
     position: absolute;
-    width: 230px;
-    height: 300px;
     display: grid;
     text-align: center;
-    width: 278px;
-    height: 325px;
     background: #08143E;
     border: 7px solid #465BA7;
     border-radius: 13px;
